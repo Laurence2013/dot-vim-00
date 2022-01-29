@@ -1,6 +1,6 @@
 " ~/.vim/sessions/project-setup-00.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 15 January 2022 at 18:56:43.
+" Created by session.vim 2.13.1 on 29 January 2022 at 05:13:32.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -22,9 +22,22 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 README
-badd +0 research/readme
-badd +0 courses/readme
+badd +1 README
+badd +1 research/readme
+badd +11 courses/readme
+badd +1 courses/javascript/code-diagrams
+badd +1 courses/javascript/theories/code-diagrams
+badd +219 courses/javascript/theories/README
+badd +1 courses/boilerplate-readme-00
+badd +60 courses/defi-tokenomics/books/how-to-defi-beginners
+badd +1 1
+badd +1 courses/defi-tokenomics/books/defi-and-the-future-of-finance
+badd +1 research/research-into-future/readme
+badd +46 courses/on-chain-analysis/search-activities
+badd +1 courses/on-chain-analysis/readme-00
+badd +63 courses/on-chain-analysis/readme
+badd +52 research/blockchain-research/cardano
+badd +59 courses/defi-tokenomics/books/token-economy-how-the-web3-reinvents-the-internet
 argglobal
 %argdel
 set stal=2
@@ -48,12 +61,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 argglobal
 enew
 " file NERD_tree_1
-balt README
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -64,7 +76,6 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt README
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -75,15 +86,15 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 27 - ((20 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 27
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 tabnext
 edit research/readme
 let s:save_splitbelow = &splitbelow
@@ -102,12 +113,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 argglobal
 enew
 " file NERD_tree_2
-balt research/readme
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -118,7 +128,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt README
+balt research/blockchain-research/cardano
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -136,10 +146,10 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 tabnext
-edit courses/readme
+edit courses/javascript/theories/README
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -156,12 +166,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 argglobal
 enew
 " file NERD_tree_3
-balt courses/readme
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -172,7 +181,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt research/readme
+balt courses/javascript/theories/code-diagrams
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -183,16 +192,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+let s:l = 221 - ((18 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 221
 normal! 0
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 99) / 198)
-exe 'vert 2resize ' . ((&columns * 166 + 99) / 198)
+exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
+exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 tabnext 3
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
@@ -225,7 +234,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|
+:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
 1wincmd w
 tabnext 2
 let s:bufnr_save = bufnr("%")
@@ -238,7 +247,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|
+:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
 1wincmd w
 tabnext 3
 let s:bufnr_save = bufnr("%")
@@ -251,7 +260,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|:1resize 49|vert :1resize 31|:2resize 49|vert :2resize 166|
+:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
 2wincmd w
 tabnext 3
 if exists('s:wipebuf')
