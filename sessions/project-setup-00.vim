@@ -1,6 +1,6 @@
 " ~/.vim/sessions/project-setup-00.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 29 January 2022 at 05:13:32.
+" Created by session.vim 2.13.1 on 15 February 2022 at 18:48:38.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -22,14 +22,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 README
+badd +11 README
 badd +1 research/readme
-badd +11 courses/readme
+badd +29 courses/readme
 badd +1 courses/javascript/code-diagrams
 badd +1 courses/javascript/theories/code-diagrams
-badd +219 courses/javascript/theories/README
+badd +251 courses/javascript/theories/README
 badd +1 courses/boilerplate-readme-00
-badd +60 courses/defi-tokenomics/books/how-to-defi-beginners
+badd +63 courses/defi-tokenomics/books/how-to-defi-beginners
 badd +1 1
 badd +1 courses/defi-tokenomics/books/defi-and-the-future-of-finance
 badd +1 research/research-into-future/readme
@@ -37,14 +37,43 @@ badd +46 courses/on-chain-analysis/search-activities
 badd +1 courses/on-chain-analysis/readme-00
 badd +63 courses/on-chain-analysis/readme
 badd +52 research/blockchain-research/cardano
-badd +59 courses/defi-tokenomics/books/token-economy-how-the-web3-reinvents-the-internet
+badd +1 courses/defi-tokenomics/books/token-economy-how-the-web3-reinvents-the-internet
+badd +9 podcasts/boilerplate-readme00
+badd +1 podcasts/lex-fridman/podcast-00
+badd +1 podcasts/trading/readme
+badd +7 courses/javascript/theories/encapsulation-and-information-hiding/readme
+badd +27 courses/defi-tokenomics/books/thank-god-for-bitcoin
+badd +1 courses/defi-tokenomics/books/readme
+badd +1 courses/defi-tokenomics/readme
+badd +1 research/podcasts/boilerplate
+badd +1 research/podcasts/blockcrunch-podcast-01
+badd +1 research/podcasts/blockcrunch-podcast-00
+badd +11 courses/defi-tokenomics/staking
+badd +1 courses/javascript/theories/prototypical-inheritance/readme
+badd +1 courses/javascript/theories/prototypical-inheritance/code-diagrams
+badd +70 courses/javascript/theories/1-intro-to-the-path--of-summoning-n-command-objects/readme
+badd +98 courses/javascript/theories/2-encapsulation-and-information-hiding/readme
+badd +1 courses/javascript/theories/1-intro-to-the-path--of-summoning-n-command-objects/code-diagrams
+badd +1 courses/javascript/theories/2-encapsulation-and-information-hiding/code-diagrams
+badd +1 courses/javascript/Udemy\ -\ Just\ Express/readme
+badd +52 courses/javascript/Udemy\ -\ Just\ Express/Section\ 4\ -\ Express\ 101/readme
+badd +118 courses/javascript/Udemy\ -\ Just\ Express/Section\ 5\ -\ Express\ 201\ -\ Middleware\ and\ Rendering/readme
+badd +66 courses/ecommerce/readme
+badd +14 tabs-00/tabssaver_data.tsd
+badd +1 training/readme
+badd +1 courses/javascript/theories/3-prototypical-inheritance/readme
+badd +1 courses/javascript/theories/3-prototypical-inheritance/code-diagrams
+badd +1 utube-downloads
+badd +1 courses/javascript/Udemy\ -\ Just\ Express/Section\ 6\ -\ Express\ 301/readme
+badd +16 courses/startup/readme
+badd +1 courses/javascript/javascript-mancy-oop/3-prototypical-inheritance/readme
 argglobal
 %argdel
 set stal=2
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit README
+edit utube-downloads
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -76,6 +105,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
+balt README
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -86,17 +116,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 27 - ((20 * winheight(0) + 24) / 49)
+let s:l = 16 - ((0 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 27
-normal! 0
+keepjumps 16
+normal! 086|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
 exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 tabnext
-edit research/readme
+edit research/podcasts/blockcrunch-podcast-01
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -128,7 +158,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt research/blockchain-research/cardano
+balt research/podcasts/blockcrunch-podcast-00
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -139,17 +169,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+let s:l = 23 - ((22 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 23
+normal! 076|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 40 + 99) / 198)
 exe 'vert 2resize ' . ((&columns * 157 + 99) / 198)
 tabnext
-edit courses/javascript/theories/README
+edit courses/javascript/javascript-mancy-oop/3-prototypical-inheritance/readme
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -181,7 +211,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt courses/javascript/theories/code-diagrams
+balt courses/boilerplate-readme-00
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -192,11 +222,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 221 - ((18 * winheight(0) + 24) / 49)
+let s:l = 96 - ((11 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 221
+keepjumps 96
 normal! 0
 wincmd w
 2wincmd w
@@ -234,7 +264,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
+:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|
 1wincmd w
 tabnext 2
 let s:bufnr_save = bufnr("%")
@@ -247,7 +277,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
+:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|
 1wincmd w
 tabnext 3
 let s:bufnr_save = bufnr("%")
@@ -260,7 +290,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|:1resize 49|vert :1resize 40|:2resize 49|vert :2resize 157|
+:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|:1resize 43|vert :1resize 40|:2resize 43|vert :2resize 157|
 2wincmd w
 tabnext 3
 if exists('s:wipebuf')
