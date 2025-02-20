@@ -24,6 +24,9 @@ syntax on
 " Add numbers to each line on the left-hand side.
 set number
 
+" HTML autocomplete autocmd FileType html 
+set omnifunc=htmlcomplete#CompleteTags
+
 " Indentation
 
 set tabstop=2
@@ -39,7 +42,8 @@ nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
 " Sesssioning setups
-let g:session_autoload = 'no'
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
 
 " Scrolling 
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
@@ -52,4 +56,42 @@ set hlsearch
 hi Search ctermbg=LightYellow 
 hi Search ctermfg=Red
 
+" HTML closing tag
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 " AutoComplete
+
+" Remove Read Only
+:set readonly!
+
+" Vim jsx-typescript
+" dark red
+hi tsxTagName guifg=#E06C75
+hi tsxComponentName guifg=#E06C75
+hi tsxCloseComponentName guifg=#E06C75
+
+" orange
+hi tsxCloseString guifg=#F99575
+hi tsxCloseTag guifg=#F99575
+hi tsxCloseTagName guifg=#F99575
+hi tsxAttributeBraces guifg=#F99575
+hi tsxEqual guifg=#F99575
+
+" yellow
+hi tsxAttrib guifg=#F8BD7F cterm=italic
+
+" plain text formatting
+:set textwidth=150
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+" Stop Vim from creating a swap file
+set noswapfile
+
+" Adding the $ sign for autocompletion
+augroup filetype_iskeyword
+    autocmd!
+    autocmd FileType javascript setlocal iskeyword+=$
+augroup END
